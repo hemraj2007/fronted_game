@@ -18,7 +18,7 @@ function App() {
     });
 
     return () => {
-      newSocket.disconnect(); 
+      newSocket.disconnect();
     };
   }, []);
 
@@ -92,9 +92,13 @@ function App() {
       </div>
 
       {/* Ander */}
-      <div className="ander">
-        <h1>Ander</h1>
+      <div className="game-instructions">
+        <h1 className="game-title">Ander</h1>
+        <h3 className="game-subtitle">
+          After entering the amount, the result will appear in 30 seconds. Win → amount doubles, Lose → amount is lost
+        </h3>
       </div>
+
 
       {/* Numbers input */}
       <div className="container">
@@ -104,7 +108,8 @@ function App() {
             <input
               type="number"
               className="number-input"
-              value={val}
+              placeholder="₹ amount"
+              // value={val}
               onChange={(e) => handleChange(i, e.target.value)}
             />
           </div>
